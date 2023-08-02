@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TabbedPage
+    x:Class="MAUISamples.Tab.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+    xmlns:droid="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MAUISamples.Tab"
+    xmlns:vw="clr-namespace:MAUISamples.Tab.Views"
+    Title="MAUISamples.Tab"
+    droid:TabbedPage.ToolbarPlacement="Bottom"
+    mc:Ignorable="d">
+    <NavigationPage Title="Calendar">
+        <x:Arguments>
+            <vw:EventsPage NavigationPage.HasNavigationBar="{OnPlatform Android=False, Default=True}" />
+        </x:Arguments>
+    </NavigationPage>
+    <vw:SearchPage />
+    <vw:SettingsPage />
+</TabbedPage>
